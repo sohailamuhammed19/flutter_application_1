@@ -4,7 +4,7 @@ import 'services/auth_service.dart';
 import 'services/language_service.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
-//sohila
+//sohila is beautiful
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final isLoggedIn = await AuthService.isLoggedIn();
