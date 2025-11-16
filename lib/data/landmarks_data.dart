@@ -1,0 +1,248 @@
+import 'package:flutter/material.dart';
+import '../models/landmark.dart';
+
+class LandmarksData {
+  static final List<Landmark> landmarks = [
+    Landmark(
+      id: '1',
+      nameEn: 'Giza Pyramid Complex',
+      nameAr: 'مجمع أهرامات الجيزة',
+      categoryEn: 'Ancient Egyptian',
+      categoryAr: 'مصرية قديمة',
+      descriptionEn:
+          'The Giza pyramid complex is the site on the Giza Plateau in Greater Cairo, Egypt that includes the Great Pyramid of Giza, the Pyramid of Khafre, and the Pyramid of Menkaure, along with their associated pyramid complexes and the Great Sphinx.',
+      descriptionAr:
+          'مجمع أهرامات الجيزة هو موقع على هضبة الجيزة في القاهرة الكبرى، مصر، ويشمل الهرم الأكبر في الجيزة، وهرم خفرع، وهرم منقرع، إلى جانب مجمعات الأهرامات المرتبطة بها وأبو الهول العظيم.',
+      accessInfoEn: 'Located in Giza, 15 km from Cairo city center. Accessible by taxi, bus, or metro to Giza station, then taxi.',
+      accessInfoAr: 'يقع في الجيزة، على بعد 15 كم من وسط مدينة القاهرة. يمكن الوصول إليه بالسيارة أو الحافلة أو المترو إلى محطة الجيزة، ثم سيارة أجرة.',
+      openingHours: '8:00 AM - 5:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 200,
+        student: 100,
+        local: 50,
+        foreign: 200,
+      ),
+      imageColor: const Color(0xFFD4A574),
+      icon: Icons.landscape,
+      imageUrl: 'assets/images/ancient_egyptian/اهرامات الجيزه.jpeg',
+      location: 'Giza, Cairo',
+    ),
+    Landmark(
+      id: '2',
+      nameEn: 'The Egyptian Museum',
+      nameAr: 'المتحف المصري',
+      categoryEn: 'Museum',
+      categoryAr: 'متحف',
+      descriptionEn:
+          'Home to an extensive collection of ancient Egyptian antiquities. It has 120,000 items, with a representative amount on display, the remainder in storerooms.',
+      descriptionAr:
+          'موطن لمجموعة واسعة من الآثار المصرية القديمة. يحتوي على 120,000 قطعة، مع كمية تمثيلية معروضة، والباقي في المستودعات.',
+      accessInfoEn: 'Located in Tahrir Square, downtown Cairo. Accessible by metro (Sadat station) or taxi.',
+      accessInfoAr: 'يقع في ميدان التحرير، وسط القاهرة. يمكن الوصول إليه بالمترو (محطة السادات) أو سيارة أجرة.',
+      openingHours: '9:00 AM - 5:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 75,
+        student: 35,
+        local: 20,
+        foreign: 75,
+      ),
+      imageColor: const Color(0xFF8B6F47),
+      icon: Icons.museum,
+      imageUrl: 'assets/images/museums/المتحف المصري.jpeg',
+      location: 'Tahrir Square, Cairo',
+    ),
+    Landmark(
+      id: '3',
+      nameEn: 'Karnak Temple Complex',
+      nameAr: 'مجمع معابد الكرنك',
+      categoryEn: 'Ancient Egyptian',
+      categoryAr: 'مصرية قديمة',
+      descriptionEn:
+          'Comprises a vast mix of decayed temples, chapels, pylons, and other buildings near Luxor. Construction at the complex began during the reign of Senusret I in the Middle Kingdom.',
+      descriptionAr:
+          'يتكون من مزيج واسع من المعابد المتداعية والكنائس والأبراج والمباني الأخرى بالقرب من الأقصر. بدأ البناء في المجمع خلال عهد سنوسرت الأول في المملكة الوسطى.',
+      accessInfoEn: 'Located in Luxor, Upper Egypt. Accessible by train from Cairo (9 hours) or flight to Luxor airport.',
+      accessInfoAr: 'يقع في الأقصر، صعيد مصر. يمكن الوصول إليه بالقطار من القاهرة (9 ساعات) أو رحلة جوية إلى مطار الأقصر.',
+      openingHours: '6:00 AM - 6:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 150,
+        student: 75,
+        local: 40,
+        foreign: 150,
+      ),
+      imageColor: const Color(0xFFC9A961),
+      icon: Icons.temple_buddhist,
+      imageUrl: 'assets/images/ancient_egyptian/معبد الكرنك.jpeg',
+      location: 'Luxor, Upper Egypt',
+    ),
+    Landmark(
+      id: '4',
+      nameEn: 'Mosque of Ibn Tulun',
+      nameAr: 'مسجد ابن طولون',
+      categoryEn: 'Islamic Civilization',
+      categoryAr: 'الحضارة الإسلامية',
+      descriptionEn:
+          'One of the oldest mosques in Egypt and the whole of Africa surviving in its full original form, and is the largest mosque in Cairo in terms of land area.',
+      descriptionAr:
+          'واحدة من أقدم المساجد في مصر وإفريقيا بأكملها التي بقيت في شكلها الأصلي الكامل، وهو أكبر مسجد في القاهرة من حيث المساحة.',
+      accessInfoEn: 'Located in Sayyida Zeinab district, Cairo. Accessible by metro or taxi.',
+      accessInfoAr: 'يقع في حي السيدة زينب، القاهرة. يمكن الوصول إليه بالمترو أو سيارة أجرة.',
+      openingHours: '8:00 AM - 5:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 20,
+        student: 10,
+        local: 5,
+        foreign: 20,
+      ),
+      imageColor: const Color(0xFF6B8E9F),
+      icon: Icons.mosque,
+      imageUrl: 'assets/images/islamic/مسجد ابن طولون.jpeg',
+      location: 'Sayyida Zeinab, Cairo',
+    ),
+    Landmark(
+      id: '5',
+      nameEn: 'Grand Egyptian Museum',
+      nameAr: 'المتحف المصري الكبير',
+      categoryEn: 'Museum',
+      categoryAr: 'متحف',
+      descriptionEn:
+          'The world\'s largest museum dedicated to a single civilization. Your visit includes access to the Tutankhamun Galleries, Main Galleries, Grand Hall, Grand Stairs, Khufu\'s Boats Museum, commercial area, and exterior gardens, offering an unparalleled journey through Egypt\'s ancient heritage and modern design.',
+      descriptionAr:
+          'أكبر متحف في العالم مخصص لحضارة واحدة. تشمل زيارتك الوصول إلى قاعات توت عنخ آمون، القاعات الرئيسية، القاعة الكبرى، السلالم الكبرى، متحف مراكب خوفو، المنطقة التجارية، والحدائق الخارجية، مما يوفر رحلة لا مثيل لها عبر التراث المصري القديم والتصميم الحديث.',
+      accessInfoEn: 'Located near Giza Pyramids. Accessible by taxi or tour bus from Cairo. Official tickets available at visit-gem.com only.',
+      accessInfoAr: 'يقع بالقرب من أهرامات الجيزة. يمكن الوصول إليه بسيارة أجرة أو حافلة سياحية من القاهرة. التذاكر الرسمية متاحة فقط على visit-gem.com.',
+      openingHours: 'Daily except Sat & Wed: 8:30 AM - 7 PM (Galleries: 9 AM - 6 PM) | Sat & Wed: 8:30 AM - 10 PM (Galleries: 9 AM - 9 PM)',
+      ticketPrices: const TicketPrices(
+        adult: 200,
+        student: 100,
+        local: 50,
+        foreign: 200,
+      ),
+      imageColor: const Color(0xFF9B7A4A),
+      icon: Icons.account_balance,
+      imageUrl: 'assets/images/museums/المتحف المصري الكبير.jpg',
+      location: 'Giza, near Pyramids',
+    ),
+    Landmark(
+      id: '6',
+      nameEn: 'Valley of the Kings',
+      nameAr: 'وادي الملوك',
+      categoryEn: 'Ancient Egyptian',
+      categoryAr: 'مصرية قديمة',
+      descriptionEn:
+          'A valley in Egypt where, for a period of nearly 500 years from the 16th to 11th century BC, rock-cut tombs were excavated for the pharaohs and powerful nobles.',
+      descriptionAr:
+          'وادي في مصر حيث تم حفر المقابر الصخرية للفراعنة والنبلاء الأقوياء لمدة تقارب 500 عام من القرن السادس عشر إلى الحادي عشر قبل الميلاد.',
+      accessInfoEn: 'Located in Luxor, West Bank. Accessible by ferry from Luxor East Bank, then taxi or tour bus.',
+      accessInfoAr: 'يقع في الأقصر، الضفة الغربية. يمكن الوصول إليه بالعبّارة من الضفة الشرقية للأقصر، ثم سيارة أجرة أو حافلة سياحية.',
+      openingHours: '6:00 AM - 5:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 240,
+        student: 120,
+        local: 60,
+        foreign: 240,
+      ),
+      imageColor: const Color(0xFFB8860B),
+      icon: Icons.terrain,
+      imageUrl: 'assets/images/ancient_egyptian/وادي-الملوك.jpg',
+      location: 'Luxor, West Bank',
+    ),
+    Landmark(
+      id: '7',
+      nameEn: 'Abu Simbel Temples',
+      nameAr: 'معابد أبو سمبل',
+      categoryEn: 'Ancient Egyptian',
+      categoryAr: 'مصرية قديمة',
+      descriptionEn:
+          'Two massive rock-cut temples in the village of Abu Simbel. They were relocated in their entirety in 1968 to avoid being submerged during the creation of Lake Nasser.',
+      descriptionAr:
+          'معبدان صخريان ضخمان في قرية أبو سمبل. تم نقلهما بالكامل في عام 1968 لتجنب الغرق أثناء إنشاء بحيرة ناصر.',
+      accessInfoEn: 'Located in Aswan Governorate. Accessible by flight from Cairo or Aswan, or by road (3 hours from Aswan).',
+      accessInfoAr: 'يقع في محافظة أسوان. يمكن الوصول إليه برحلة جوية من القاهرة أو أسوان، أو بالطريق (3 ساعات من أسوان).',
+      openingHours: '6:00 AM - 5:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 200,
+        student: 100,
+        local: 50,
+        foreign: 200,
+      ),
+      imageColor: const Color(0xFFCD853F),
+      icon: Icons.temple_hindu,
+      imageUrl: 'assets/images/ancient_egyptian/معبد ابو سمبل.jpg',
+      location: 'Abu Simbel, Aswan',
+    ),
+    Landmark(
+      id: '8',
+      nameEn: 'Al-Azhar Mosque',
+      nameAr: 'جامع الأزهر',
+      categoryEn: 'Islamic Civilization',
+      categoryAr: 'الحضارة الإسلامية',
+      descriptionEn:
+          'One of Cairo\'s oldest and most important mosques. It is also one of the world\'s oldest universities and remains a leading center of Islamic learning.',
+      descriptionAr:
+          'واحدة من أقدم وأهم مساجد القاهرة. وهي أيضًا واحدة من أقدم الجامعات في العالم ولا تزال مركزًا رائدًا للتعليم الإسلامي.',
+      accessInfoEn: 'Located in Islamic Cairo. Accessible by metro (Al-Azhar station) or taxi.',
+      accessInfoAr: 'يقع في القاهرة الإسلامية. يمكن الوصول إليه بالمترو (محطة الأزهر) أو سيارة أجرة.',
+      openingHours: '24 hours (prayer times)',
+      ticketPrices: const TicketPrices(
+        adult: 0,
+        student: 0,
+        local: 0,
+        foreign: 0,
+      ),
+      imageColor: const Color(0xFF8B7355),
+      icon: Icons.mosque,
+      imageUrl: 'assets/images/islamic/مسجد الازهر.jpg',
+      location: 'Islamic Cairo',
+    ),
+    Landmark(
+      id: '9',
+      nameEn: 'Hanging Church (El Muallaqa)',
+      nameAr: 'الكنيسة المعلقة',
+      categoryEn: 'Christian Heritage',
+      categoryAr: 'التراث المسيحي',
+      descriptionEn:
+          'The most famous Coptic Christian church in Cairo, and possibly the first built in basilican style. The church is dedicated to the Virgin Mary and contains sanctuaries to her and Saints John the Baptist and George. It features 110 icons, the oldest dating back to the 8th century. The church was the seat of the Coptic Orthodox Pope of Alexandria from 1047.',
+      descriptionAr:
+          'أشهر كنيسة قبطية مسيحية في القاهرة، وربما أول كنيسة بُنيت على الطراز البازيليكي. الكنيسة مكرسة للعذراء مريم وتحتوي على مزارات لها وللقديسين يوحنا المعمدان وجورج. تضم 110 أيقونة، أقدمها يعود إلى القرن الثامن. كانت الكنيسة مقر بطريرك الأقباط الأرثوذكس في الإسكندرية منذ عام 1047.',
+      accessInfoEn: 'Located in Coptic Cairo (Babylon Fortress area), Old Cairo. Accessible by metro (Mar Girgis station) or taxi.',
+      accessInfoAr: 'تقع في القاهرة القبطية (منطقة حصن بابليون)، القاهرة القديمة. يمكن الوصول إليها بالمترو (محطة مار جرجس) أو سيارة أجرة.',
+      openingHours: '9:00 AM - 5:00 PM',
+      ticketPrices: const TicketPrices(
+        adult: 50,
+        student: 25,
+        local: 10,
+        foreign: 50,
+      ),
+      imageColor: const Color(0xFF7B8A8B),
+      icon: Icons.church,
+      imageUrl: 'assets/images/christian/الكنيسه المعلقه.jpg',
+      location: 'Coptic Cairo, Old Cairo',
+    ),
+    Landmark(
+      id: '10',
+      nameEn: 'Ben Ezra Synagogue (Jewish Temple)',
+      nameAr: 'معبد بن عزرا اليهودي',
+      categoryEn: 'Jewish Heritage',
+      categoryAr: 'التراث اليهودي',
+      descriptionEn:
+          'One of the oldest synagogues in Egypt, located in the Coptic Cairo area. The synagogue is historically significant as it is believed to be the site where the infant Moses was found. The building dates back to the 9th century and was restored in the 19th century. It houses important Jewish manuscripts and artifacts, including the famous Cairo Geniza documents.',
+      descriptionAr:
+          'واحدة من أقدم المعابد اليهودية في مصر، تقع في منطقة القاهرة القبطية. المعبد ذو أهمية تاريخية حيث يُعتقد أنه الموقع الذي وُجد فيه الطفل موسى. يعود المبنى إلى القرن التاسع وتم ترميمه في القرن التاسع عشر. يضم مخطوطات وقطع أثرية يهودية مهمة، بما في ذلك وثائق جنيزة القاهرة الشهيرة.',
+      accessInfoEn: 'Located in Coptic Cairo, near the Hanging Church. Accessible by metro (Mar Girgis station) or taxi.',
+      accessInfoAr: 'يقع في القاهرة القبطية، بالقرب من الكنيسة المعلقة. يمكن الوصول إليه بالمترو (محطة مار جرجس) أو سيارة أجرة.',
+      openingHours: '9:00 AM - 4:00 PM (Closed on Saturdays)',
+      ticketPrices: const TicketPrices(
+        adult: 40,
+        student: 20,
+        local: 10,
+        foreign: 40,
+      ),
+      imageColor: const Color(0xFF8B6914),
+      icon: Icons.temple_buddhist,
+      imageUrl: 'assets/images/jewish/المعبد-اليهودي.jpg',
+      location: 'Coptic Cairo, Old Cairo',
+    ),
+  ];
+}
+
